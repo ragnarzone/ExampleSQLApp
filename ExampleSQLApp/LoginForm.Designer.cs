@@ -157,6 +157,7 @@ namespace ExampleSQLApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Authorization";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginForm
             // 

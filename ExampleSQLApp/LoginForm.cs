@@ -94,6 +94,12 @@ namespace ExampleSQLApp
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
+            foreach(DataRow row in table.Rows)
+            {
+                Console.WriteLine(row["login"].ToString());
+                Console.WriteLine(row["pass"].ToString());
+            }
+
             if(table.Rows.Count > 0)
             {
                 MessageBox.Show("You are authorised");
@@ -101,6 +107,11 @@ namespace ExampleSQLApp
             {
                 MessageBox.Show("User not exist");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
